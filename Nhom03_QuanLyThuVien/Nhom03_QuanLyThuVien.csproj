@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FF2A7A27-AB7D-4378-BFDD-BA7E0D6C12F8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Nhom03_QuanLyThuVien</RootNamespace>
+    <AssemblyName>Nhom03_QuanLyThuVien</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormBangCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBangCap.Designer.cs">
+      <DependentUpon>FormBangCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDocGia.Designer.cs">
+      <DependentUpon>FormDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNhanVien.Designer.cs">
+      <DependentUpon>FormNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPhieuMuonSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPhieuMuonSach.Designer.cs">
+      <DependentUpon>FormPhieuMuonSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPhieuThuTien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPhieuThuTien.Designer.cs">
+      <DependentUpon>FormPhieuThuTien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSach.Designer.cs">
+      <DependentUpon>FormSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BANGCAP.cs" />
+    <Compile Include="Models\DOCGIA.cs" />
+    <Compile Include="Models\NHANVIEN.cs" />
+    <Compile Include="Models\PHIEUMUONSACH.cs" />
+    <Compile Include="Models\PHIEUTHUTIEN.cs" />
+    <Compile Include="Models\SACH.cs" />
+    <Compile Include="Models\ThuVienContextDB.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TrangChuThuVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrangChuThuVien.Designer.cs">
+      <DependentUpon>TrangChuThuVien.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormBangCap.resx">
+      <DependentUpon>FormBangCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDocGia.resx">
+      <DependentUpon>FormDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNhanVien.resx">
+      <DependentUpon>FormNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPhieuMuonSach.resx">
+      <DependentUpon>FormPhieuMuonSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPhieuThuTien.resx">
+      <DependentUpon>FormPhieuThuTien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSach.resx">
+      <DependentUpon>FormSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="TrangChuThuVien.resx">
+      <DependentUpon>TrangChuThuVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BGThuVien.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BangCapIcon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocGiaIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MuonSachIcon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NhanVienicon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PhieuThuIcon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SachIcon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-add-vector-icon-png-image_4707001.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-customer-service-computer-icons-car-automobile-rep-served-svg-png-icon-free-download-27465-onli-5b8e1bbe7fda14.3508031215360398705237.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3221845.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-exit-direction-line-icon-vector-png-image_5195526.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-vector-search-icon-png-image_848679.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
